@@ -25,7 +25,7 @@ The `postcheck` is a second-stage Java validator (PDFBox 3.x) bundled in this im
 ## Build
 
 ```bash
-docker build -t Jean-Beru/facturx-validator .
+docker build -t jean-beru/facturx-validator .
 ```
 
 Build arguments:
@@ -37,7 +37,7 @@ Build arguments:
 ## Usage
 
 ```bash
-docker run --rm -v "$PWD:/data" Jean-Beru/facturx-validator /data/invoice.pdf
+docker run --rm -v "$PWD:/data" jean-beru/facturx-validator /data/invoice.pdf
 ```
 
 The image takes the path to the PDF inside the container. Exit code `0` if the invoice is compliant, non-zero otherwise.
@@ -45,13 +45,13 @@ The image takes the path to the PDF inside the container. Exit code `0` if the i
 Pass `--debug` before the path to restore Mustang's full SLF4J log output (silenced to `error` by default):
 
 ```bash
-docker run --rm -v "$PWD:/data" Jean-Beru/facturx-validator --debug /data/invoice.pdf
+docker run --rm -v "$PWD:/data" jean-beru/facturx-validator --debug /data/invoice.pdf
 ```
 
 Pass `--format=yaml|md|xml` to merge Mustang and postcheck results into a single structured report on stdout (text output otherwise stays as-is):
 
 ```bash
-docker run --rm -v "$PWD:/data" Jean-Beru/facturx-validator --format=yaml /data/invoice.pdf
+docker run --rm -v "$PWD:/data" jean-beru/facturx-validator --format=yaml /data/invoice.pdf
 ```
 
 ## References

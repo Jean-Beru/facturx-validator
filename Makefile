@@ -1,2 +1,2 @@
 build:
-	docker build -t Jean-Beru/facturx-validator:dev .
+	docker build -t jean-beru/facturx-validator:dev .
